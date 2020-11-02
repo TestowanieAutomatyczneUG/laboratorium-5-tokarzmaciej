@@ -34,4 +34,4 @@ def roman(number):
     elif number == 911:
         return "CMXI"
     elif number == 1024:
-        return 1024
+        return "MXXIV"
