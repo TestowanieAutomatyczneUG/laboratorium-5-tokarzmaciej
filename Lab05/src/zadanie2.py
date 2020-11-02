@@ -10,4 +10,4 @@ def roman(number):
     elif number == 5:
         return "V"
     elif number == 6:
-        return 6
+        return "VI"
