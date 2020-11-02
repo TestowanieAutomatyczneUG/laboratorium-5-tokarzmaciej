@@ -7,3 +7,5 @@ def roman(number):
         return "III"
     elif number == 4:
         return "IV"
+    elif number == 5:
+        return 5
