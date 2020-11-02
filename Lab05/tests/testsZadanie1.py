@@ -32,7 +32,7 @@ class HammingTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.distance("", "G")
 
-    @unittest.skip
+   
     def test_disallow_right_empty_strand(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.distance("G", "")
