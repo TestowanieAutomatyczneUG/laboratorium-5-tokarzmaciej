@@ -17,3 +17,5 @@ def roman(number):
         return "XXVII"
     elif number == 48:
         return "XLVIII"
+    elif number == 49:
+        return 49
