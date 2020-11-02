@@ -18,4 +18,4 @@ def roman(number):
     elif number == 48:
         return "XLVIII"
     elif number == 49:
-        return 49
+        return "XLIX"
