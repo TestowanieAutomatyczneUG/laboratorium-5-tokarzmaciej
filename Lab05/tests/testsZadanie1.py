@@ -10,19 +10,15 @@ class HammingTest(unittest.TestCase):
     def test_single_letter_identical_strands(self):
         self.assertEqual(self.temp.distance("A", "A"), 0)
 
-
     def test_single_letter_different_strands(self):
         self.assertEqual(self.temp.distance("G", "T"), 1)
-
 
     def test_long_identical_strands(self):
         self.assertEqual(self.temp.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
 
-
     def test_long_different_strands(self):
         self.assertEqual(self.temp.distance("GGACGGATTCTG", "AGGACGGATTCT"), 9)
 
-    @unittest.skip
     def test_disallow_first_strand_longer(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.distance("AATG", "AAA")
