@@ -4,13 +4,9 @@ import unittest
 
 class HammingTest(unittest.TestCase):
 
-    def assertRaisesWithMessage(self, exception):
-        return self.assertRaisesRegex(exception, r".+")
-
     def test_empty_strands(self):
         self.assertEqual(self.temp.distance("", ""), 0)
 
-    @unittest.skip
     def test_single_letter_identical_strands(self):
         self.assertEqual(self.temp.distance("A", "A"), 0)
 
@@ -53,6 +49,9 @@ class HammingTest(unittest.TestCase):
             self.assertRaisesRegex
         except AttributeError:
             self.assertRaisesRegex = self.assertRaisesRegexp
+
+    def assertRaisesWithMessage(self, exception):
+        return self.assertRaisesRegex(exception, r".+")
 
     def tearDown(self):
         self.temp = None
