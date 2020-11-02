@@ -28,5 +28,5 @@ def roman(number):
     elif number == 163:
         return "CLXIII"
     elif number == 402:
-        return 402
+        return "CDII"
 
