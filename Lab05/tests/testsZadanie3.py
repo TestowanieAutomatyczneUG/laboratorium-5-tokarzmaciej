@@ -38,6 +38,9 @@ class SongTest(unittest.TestCase):
     def test_section_song_end_more_than_start(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.sectionSong(23, 20)
+    def test_section_song_minus_end_and_start(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.sectionSong(-4, -3)
 
     # Utility functions
     def setUp(self):
