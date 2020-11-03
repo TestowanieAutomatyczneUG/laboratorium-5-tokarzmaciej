@@ -41,4 +41,6 @@ class ChristmasSong:
             raise TypeError('start and end have to be int')
         if start == end:
             raise ValueError('start can not equal end')
+        if start > end:
+            raise ValueError('end have to more than start')
         return self.text[start-1:end]
