@@ -28,5 +28,7 @@ class ChristmasSong:
                      'four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.']
 
     def singleVers(self,number):
-
-        return self.text[number-1]
+        if len(self.text) < number:
+            raise ValueError('not have this verse in the song')
+        else:
+            return self.text[number-1]

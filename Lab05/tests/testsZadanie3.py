@@ -12,8 +12,8 @@ class SongTest(unittest.TestCase):
 
     def test_sigle_vers_length_more_than_song_length(self):
         with self.assertRaisesWithMessage(ValueError):
-            self.temp.singleVers(59)
-     
+            self.temp.singleVers(101)
+
 
     # Utility functions
     def setUp(self):
