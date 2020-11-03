@@ -25,22 +25,30 @@ class SongTest(unittest.TestCase):
             self.temp.singleVers(-1)
 
     def test_section_song_1_2(self):
-        self.assertEqual(self.temp.sectionSong(1, 2),['On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.','On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.'])
+        self.assertEqual(self.temp.sectionSong(1, 2),
+                         ['On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.',
+                          'On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.'])
 
     def test_section_song_not_int(self):
         with self.assertRaisesWithMessage(TypeError):
-            self.temp.sectionSong("a",4)
+            self.temp.sectionSong("a", 4)
 
     def test_section_song_start_equal_end(self):
         with self.assertRaisesWithMessage(ValueError):
-            self.temp.sectionSong(23,23)
+            self.temp.sectionSong(23, 23)
 
     def test_section_song_end_more_than_start(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.sectionSong(23, 20)
+
     def test_section_song_minus_end_and_start(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.sectionSong(-4, -3)
+
+    def test_section_song_length_more_than_song_length(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.sectionSong(100, 120)
+
 
     # Utility functions
     def setUp(self):
