@@ -51,4 +51,4 @@ class ChristmasSong:
         return self.text[start - 1:end]
 
     def wholeTextSong(self):
-        return self.textsong
+        return self.text
