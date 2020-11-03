@@ -5,7 +5,7 @@ import unittest
 class SongTest(unittest.TestCase):
 
     def test_sigle_vers_one(self):
-        self.assertEqual(self.temp.singleVers(0), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
+        self.assertEqual(self.temp.singleVers(1), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
 
 
     # Utility functions

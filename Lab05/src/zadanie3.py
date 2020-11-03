@@ -41,4 +41,4 @@ class ChristmasSong:
                         four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."""
 
     def singleVers(self,number):
-        return self.text.split("")[number]
+        return self.text.split("\n")[number-1]
