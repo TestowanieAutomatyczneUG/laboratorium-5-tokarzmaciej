@@ -37,4 +37,4 @@ class ChristmasSong:
         else:
             return self.text[number - 1]
     def sectionSong(self,start,end):
-        return self.text[start:end]
+        return self.text[start-1:end]
