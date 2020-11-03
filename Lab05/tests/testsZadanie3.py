@@ -48,7 +48,8 @@ class SongTest(unittest.TestCase):
     def test_section_song_length_more_than_song_length(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.sectionSong(100, 120)
-
+    def test_section_all_song_(self):
+        self.assertEqual(self.temp.sectionSong(1, len(self.temp.text)),self.temp.text)
     # Utility functions
     def setUp(self):
         self.temp = ChristmasSong()
