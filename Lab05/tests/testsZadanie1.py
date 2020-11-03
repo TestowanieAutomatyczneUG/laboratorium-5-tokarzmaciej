@@ -1,4 +1,4 @@
-from Lab05.src.zadanie1 import Hamming
+from src.zadanie1 import Hamming
 import unittest
 
 

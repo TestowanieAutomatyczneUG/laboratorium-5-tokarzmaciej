@@ -1,4 +1,4 @@
-from Lab05.src.zadanie3 import ChristmasSong
+from src.zadanie3 import ChristmasSong
 import unittest
 
 
