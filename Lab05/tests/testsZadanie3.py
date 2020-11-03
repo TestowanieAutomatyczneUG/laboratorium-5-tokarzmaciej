@@ -31,6 +31,10 @@ class SongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(TypeError):
             self.temp.sectionSong("a",4)
 
+    def test_section_song_start_equal_end(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.sectionSong(23,23)
+
     # Utility functions
     def setUp(self):
         self.temp = ChristmasSong()
