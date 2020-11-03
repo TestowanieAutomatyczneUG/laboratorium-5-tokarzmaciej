@@ -49,3 +49,6 @@ class ChristmasSong:
         if start > len(self.text) or end > len(self.text):
             raise ValueError('start and end have to less than song length')
         return self.text[start - 1:end]
+
+    def wholeTextSong(self):
+        return self.textsong
