@@ -7,6 +7,8 @@ class SongTest(unittest.TestCase):
     def test_sigle_vers_one(self):
         self.assertEqual(self.temp.singleVers(1), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
 
+    def test_sigle_vers_seven(self):
+        self.assertEqual(self.temp.singleVers(7), 'On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, ')
 
     # Utility functions
     def setUp(self):

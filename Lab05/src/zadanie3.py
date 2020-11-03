@@ -1,5 +1,3 @@
-
-
 class ChristmasSong:
     def __init__(self):
         self.text = """On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.
