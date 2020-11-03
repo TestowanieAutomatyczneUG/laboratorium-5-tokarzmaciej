@@ -39,4 +39,6 @@ class ChristmasSong:
     def sectionSong(self,start,end):
         if type(start) != int or type(end) != int:
             raise TypeError('start and end have to be int')
+        if start == end:
+            raise ValueError('start can not equal end')
         return self.text[start-1:end]
