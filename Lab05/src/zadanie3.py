@@ -27,8 +27,11 @@ class ChristmasSong:
                      'a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, ',
                      'four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.']
 
-    def singleVers(self,number):
+    def singleVers(self, number):
+
+        if type(number) != int:
+            raise ValueError('number have to be int')
         if len(self.text) < number:
             raise ValueError('not have this verse in the song')
         else:
-            return self.text[number-1]
+            return self.text[number - 1]

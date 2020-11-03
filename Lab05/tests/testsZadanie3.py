@@ -5,15 +5,20 @@ import unittest
 class SongTest(unittest.TestCase):
 
     def test_sigle_vers_one(self):
-        self.assertEqual(self.temp.singleVers(1), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
+        self.assertEqual(self.temp.singleVers(1),
+                         'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
 
     def test_sigle_vers_seven(self):
-        self.assertEqual(self.temp.singleVers(7), 'On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, ')
+        self.assertEqual(self.temp.singleVers(7),
+                         'On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, ')
 
     def test_sigle_vers_length_more_than_song_length(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.singleVers(101)
 
+    def test_sigle_vers_not_int(self):
+        with self.assertRaisesWithMessage(TypeError):
+            self.temp.singleVers("a")
 
     # Utility functions
     def setUp(self):
