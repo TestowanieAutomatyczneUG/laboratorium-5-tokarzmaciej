@@ -30,7 +30,7 @@ class ChristmasSong:
     def singleVers(self, number):
 
         if type(number) != int:
-            raise ValueError('number have to be int')
+            raise TypeError('number have to be int')
         if len(self.text) < number:
             raise ValueError('not have this verse in the song')
         else:
