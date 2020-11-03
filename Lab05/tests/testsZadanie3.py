@@ -20,6 +20,10 @@ class SongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(TypeError):
             self.temp.singleVers("a")
 
+    def test_sigle_vers_minus_vers(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.singleVers(-1)
+
     # Utility functions
     def setUp(self):
         self.temp = ChristmasSong()
