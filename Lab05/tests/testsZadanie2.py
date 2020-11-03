@@ -1,5 +1,5 @@
 import unittest
-from Lab05.src.zadanie2 import roman
+from src.zadanie2 import roman
 
 
 class RomanNumeralsTest(unittest.TestCase):
