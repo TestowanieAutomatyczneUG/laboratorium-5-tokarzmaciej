@@ -10,6 +10,11 @@ class SongTest(unittest.TestCase):
     def test_sigle_vers_seven(self):
         self.assertEqual(self.temp.singleVers(7), 'On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, ')
 
+    def test_sigle_vers_length_more_than_song_length(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.singleVers(59)
+     
+
     # Utility functions
     def setUp(self):
         self.temp = ChristmasSong()
