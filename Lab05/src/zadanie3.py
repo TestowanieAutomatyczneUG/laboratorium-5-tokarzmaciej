@@ -46,6 +46,6 @@ class ChristmasSong:
             raise ValueError('end have to more than start')
         if start <= 0 or end <= 0:
             raise ValueError('start and end have to more zero')
-        if start > len(self.text) or end >= len(self.text):
+        if start > len(self.text) or end > len(self.text):
             raise ValueError('start and end have to less than song length')
         return self.text[start - 1:end]
