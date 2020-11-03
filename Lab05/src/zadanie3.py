@@ -28,10 +28,11 @@ class ChristmasSong:
                      'four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.']
 
     def singleVers(self, number):
-
         if type(number) != int:
             raise TypeError('number have to be int')
         if len(self.text) < number:
             raise ValueError('not have this verse in the song')
+        if 0 >= number:
+            raise ValueError('minus number')
         else:
             return self.text[number - 1]
