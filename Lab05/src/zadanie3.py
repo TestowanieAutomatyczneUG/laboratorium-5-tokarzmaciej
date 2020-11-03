@@ -36,13 +36,16 @@ class ChristmasSong:
             raise ValueError('minus number')
         else:
             return self.text[number - 1]
-    def sectionSong(self,start,end):
+
+    def sectionSong(self, start, end):
         if type(start) != int or type(end) != int:
             raise TypeError('start and end have to be int')
         if start == end:
             raise ValueError('start can not equal end')
         if start > end:
             raise ValueError('end have to more than start')
-        if start <= 0 and end <= 0:
+        if start <= 0 or end <= 0:
             raise ValueError('start and end have to more zero')
-        return self.text[start-1:end]
+        if start > len(self.text) or end > len(self.text):
+            raise ValueError('start and end have to less than song length')
+        return self.text[start - 1:end]

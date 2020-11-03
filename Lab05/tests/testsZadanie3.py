@@ -49,7 +49,6 @@ class SongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.sectionSong(100, 120)
 
-
     # Utility functions
     def setUp(self):
         self.temp = ChristmasSong()
