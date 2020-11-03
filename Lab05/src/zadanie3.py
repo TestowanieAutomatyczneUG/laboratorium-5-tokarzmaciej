@@ -36,3 +36,5 @@ class ChristmasSong:
             raise ValueError('minus number')
         else:
             return self.text[number - 1]
+    def sectionSong(self,start,end):
+        return self.text[start:end]
