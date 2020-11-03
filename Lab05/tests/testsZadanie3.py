@@ -27,6 +27,10 @@ class SongTest(unittest.TestCase):
     def test_section_song_1_2(self):
         self.assertEqual(self.temp.sectionSong(1, 2),['On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.','On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.'])
 
+    def test_section_song_not_int(self):
+        with self.assertRaisesWithMessage(TypeError):
+            self.temp.sectionSong("a",4)
+
     # Utility functions
     def setUp(self):
         self.temp = ChristmasSong()
